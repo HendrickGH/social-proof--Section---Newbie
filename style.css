@@ -1,0 +1,209 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+
+### Neutral
+
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+- Weights: 400, 500, 700
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Spartan', sans-serif;
+	background-color: #fff;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
+}
+.section {
+	display: flex;
+	background-repeat: no-repeat;
+	width: 90rem;
+}
+.section-top {
+	background-image: url(images/bg-pattern-top-desktop.svg);
+}
+.section-bottom {
+	background-image: url(images/bg-pattern-bottom-desktop.svg);
+}
+.header {
+	flex: 0 1 40%;
+}
+.figure--stars {
+	flex: 1;
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	gap: 1.2rem;
+}
+.article {
+	background-color: #f7f2f7;
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+	width: 37rem;
+	padding: 1.2rem 3.6rem 1.2rem 2.4rem;
+}
+.article:nth-child(2) {
+	justify-self: center;
+}
+.article:nth-child(3) {
+	justify-self: flex-end;
+}
+.box-stars {
+	display: flex;
+	gap: 0.4rem;
+}
+.stars {
+	color: #502050;
+	font-weight: 700;
+	font-size: 1.2rem;
+}
+.title {
+	color: #502050;
+	font-weight: 700;
+	font-size: 3.6rem;
+}
+.text {
+	color: #502050;
+	font-weight: 500;
+	font-size: 1.2rem;
+	margin-top: 1.2rem;
+	line-height: 1.5;
+	letter-spacing: 0.075px;
+}
+.section-bottom {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2.4rem;
+	height: 20rem;
+}
+.testimonial {
+	background-color: #502050;
+	padding: 3.6rem;
+	border-radius: 0.6rem;
+}
+.testimonial:nth-child(1) {
+	align-self: start;
+}
+.testimonial:nth-child(2) {
+	align-self: center;
+}
+.testimonial:nth-child(3) {
+	align-self: end;
+}
+.testimonial .figure {
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+}
+.container {
+	display: flex;
+	gap: 1.2rem;
+}
+.container img {
+	height: 3.2rem;
+	border-radius: 1000rem;
+}
+.user-data {
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}
+.name {
+	color: #fff;
+	font-weight: 500;
+}
+.verified {
+	color: hsl(333, 80%, 67%);
+	font-weight: 400;
+}
+.text-testimonial {
+	font-size: 0.9rem;
+	color: #fff;
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: 0.075px;
+}
+@media (max-width: 41em) {
+	html {
+		font-size: 50%;
+		overflow: hidden;
+	}
+	body {
+		align-items: flex-start;
+		height: auto;
+		width: auto;
+		overflow: hidden;
+	}
+	.main {
+		margin-top: 1.2rem;
+		margin-left: 2.4rem;
+	}
+	.section {
+		width: 25rem;
+	}
+	.text {
+		text-align: center;
+	}
+	.section-top {
+		flex-direction: column;
+	}
+	.figure--stars {
+		flex: 0;
+		display: flex;
+		flex-direction: column;
+	}
+	.article {
+		padding: 1.2rem 0.6rem;
+		justify-content: flex-start;
+		width: auto;
+	}
+	.section-bottom {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
+}
